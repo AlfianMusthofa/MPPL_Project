@@ -1,3 +1,35 @@
+<?php
+require 'function.php';
+
+if (isset($_POST["login"])) {
+
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $cek = mysqli_query($conn, "SELECT * FROM user_db WHERE username = '$username'");
+
+    if (mysqli_num_rows($cek) === 1) {
+
+        $nama = mysqli_fetch_assoc($cek);
+
+        if (password_verify($password, $nama["password"])) {
+
+            echo "
+                <script>
+                alert('Anjay login');
+                </script>
+                ";
+        }
+    } else {
+        echo "
+                <script>
+                alert('Username atau Password salah!');
+                </script>
+                ";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,11 +54,11 @@
                     </div>
                     <div class="input-field">
                         <p>Username*</p>
-                        <input type="text" name="username" placeholder="Enter your Username" autocomplete="OFF">
+                        <input type="text" name="username" placeholder="Enter your Username" autocomplete="OFF" autofocus required>
                     </div>
                     <div class="input-field">
                         <p>Password*</p>
-                        <input type="password" name="password" placeholder="Enter your Password">
+                        <input type="password" name="password" placeholder="Enter your Password" required>
                     </div>
                     <div class="cookie">
                         <input type="checkbox" name="ingatsaya" id="ingatsaya" class="check">
