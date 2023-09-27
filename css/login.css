@@ -54,6 +54,7 @@ form img {
 form .title {
     margin: 30px 0 10px;
     text-align: center;
+    color: var(--font-color);
 }
 
 form .content {

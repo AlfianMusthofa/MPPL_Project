@@ -1,32 +1,3 @@
-<?php
-require 'function.php';
-
-if (isset($_POST["login"])) {
-
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    $cek = mysqli_query($conn, "SELECT * FROM user_db WHERE username = '$username'");
-
-    if (mysqli_num_rows($cek) === 1) {
-
-        $nama = mysqli_fetch_assoc($cek);
-
-        if (password_verify($password, $nama["password"])) {
-
-            header("Location: index.php");
-            exit;
-        }
-    } else {
-        echo "
-            <script>
-            alert('Username atau Password salah!');
-            </script>
-            ";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +6,7 @@ if (isset($_POST["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 
 <body>
@@ -54,17 +25,13 @@ if (isset($_POST["login"])) {
                     <label for="password">Password *</label>
                     <input type="password" name="password" placeholder="Input Password" autocomplete="OFF" required>
                 </div>
-                <div class="cookie">
-                    <input type="checkbox" name="ingatsaya" id="">
-                    <p>Ingat saya</p>
+                <div class="input-field">
+                    <label for="password2">Confirm Password *</label>
+                    <input type="password" name="password2" placeholder="Input Password" autocomplete="OFF" required>
                 </div>
-                <button type="submit" name="login">LOGIN</button>
+                <button type="submit" name="signup">SIGNUP</button>
                 <div class="link">
-                    <a href="#">Lupa password</a>
-                    <a href="signup.php">Belum punya akun?</a>
-                </div>
-                <div class="cp">
-                    <p>Image from Unsplash</p>
+                    <a href="login.php">Sudah punya akun?</a>
                 </div>
             </div>
         </form>
