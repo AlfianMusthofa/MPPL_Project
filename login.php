@@ -14,11 +14,8 @@ if (isset($_POST["login"])) {
 
         if (password_verify($password, $nama["password"])) {
 
-            echo "
-                <script>
-                alert('Anjay login');
-                </script>
-                ";
+            header("Location: index.php");
+            exit;
         }
     } else {
         echo "
@@ -44,31 +41,30 @@ if (isset($_POST["login"])) {
 <body>
     <section class="container">
         <form action="" method="post">
-            <div class="col">
-                <img src="assets/bg.jpg">
-            </div>
-            <div class="col">
-                <div class="caption">
-                    <div class="title">
-                        <h1>Hello! Friend!</h1>
-                    </div>
-                    <div class="input-field">
-                        <p>Username*</p>
-                        <input type="text" name="username" placeholder="Enter your Username" autocomplete="OFF" autofocus required>
-                    </div>
-                    <div class="input-field">
-                        <p>Password*</p>
-                        <input type="password" name="password" placeholder="Enter your Password" required>
-                    </div>
-                    <div class="cookie">
-                        <input type="checkbox" name="ingatsaya" id="ingatsaya" class="check">
-                        <p>Ingat saya</p>
-                    </div>
-                    <button type="submit" name="login">LOGIN</button>
-                    <div class="register">
-                        <a href="#">Lupa password?</a>
-                        <a href="#">Tidak punya akun?</a>
-                    </div>
+            <img src="assets/bg.jpg" alt="">
+            <div class="content">
+                <div class="title">
+                    <h3>Hello Friend</h3>
+                </div>
+                <div class="input-field">
+                    <label for="username">Username *</label>
+                    <input type="text" name="username" placeholder="Input Username" autocomplete="OFF" autofocus required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password *</label>
+                    <input type="password" name="password" placeholder="Input Password" autocomplete="OFF" required>
+                </div>
+                <div class="cookie">
+                    <input type="checkbox" name="ingatsaya" id="">
+                    <p>Ingat saya</p>
+                </div>
+                <button type="submit" name="login">LOGIN</button>
+                <div class="link">
+                    <a href="#">Lupa password</a>
+                    <a href="#">Belum punya akun?</a>
+                </div>
+                <div class="cp">
+                    <p>Image from Unsplash</p>
                 </div>
             </div>
         </form>
