@@ -1,3 +1,17 @@
+<?php
+require 'function.php';
+
+if (isset($_POST["signup"])) {
+    if (tambah($_POST)) {
+        echo "
+            <script>
+            alert('Berhasil mendaftar!');
+            </script>
+            ";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
