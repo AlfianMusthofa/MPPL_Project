@@ -1,3 +1,1 @@
-# MPPL_Project
-
-Sebuah sesuatu yang masih diproses.
+kan sudah "ku katakan dengan indah"
