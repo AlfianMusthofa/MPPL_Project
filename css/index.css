@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,600&family=Satisfy&display=swap');
 
+:root {
+    --main-theme-color: #007bff;
+    --font-color: #303135;
+    --font-color-grey: #71747d;
+    --hover-main-color: #429dff;
+    --price-color: #f15c59;
+    --biru-muda: #cce6ff;
+    --border-radius-color: #bfbfbf;
+}
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     transition: all 0.3s ease;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,8 +27,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 7%;
     background-color: blueviolet;
+    padding: 15px 7%;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,6 +40,7 @@ body {
     font-size: 18px;
     color: #fff;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .header .navlink a {
@@ -36,61 +48,75 @@ body {
     color: #fff;
 }
 
-.header .menu {
-    display: none;
-    color: #fff;
+.hero {
+    margin-top: 70px;
+    padding: 0 7%;
 }
 
-.nav-menu {
-    position: absolute;
-    top: 75px;
-    right: 20px;
-    height: 100px;
-    background-color: aqua;
-    width: 150px;
-    border-radius: 10px;
+.hero img {
+    width: 100%;
+    height: 302px;
+    object-fit: cover;
+}
+
+.product {
+    width: 1055px;
+    margin: 25px auto;
+    border-top: 1px solid var(--border-radius-color);
+}
+
+.product .title h4 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.product .kartu {
+    width: 188px;
+    /* border: 1px solid red; */
+    /* height: 290px; */
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
-    display: none;
+    border-radius: 7px;
 }
 
-.active {
-    display: block;
-}
-
-.nav-menu .submenu {
+.product .baris {
     display: flex;
-    gap: 5px;
-    margin: auto;
-    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.nav-menu .submenu p {
-    font-size: 14px;
-    color: #fff;
-    font-weight: 600;
+.product .baris a {
+    text-decoration: none;
 }
 
+.product .baris img {
+    width: 188px;
+    height: 188px;
+    object-fit: cover;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
 
+.product .caption {
+    /* line-height: 18px; */
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-color);
+    /* border: 1px solid red; */
+}
 
+.product .product-title {
+    font-size: 13px;
+}
 
+.product .address {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -5px;
+    color: var(--font-color-grey);
+}
 
-
-
-
-
-
-
-@media (max-width: 576px) {
-    .header .menu {
-        display: block;
-        color: #fff;
-        cursor: pointer;
-        ;
-    }
-
-    .header .navlink a {
-        margin: 0 8px;
-        color: #fff;
-        display: none;
-    }
+.product .price h4 {
+    margin-top: -6px;
+    font-size: 15px;
+    font-weight: 700;
 }

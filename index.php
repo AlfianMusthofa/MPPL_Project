@@ -7,6 +7,7 @@
     <title>TokoEdi | Meyediakan Berbagai kebutuhan</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,20 +19,47 @@
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
         </div>
-        <div class="menu">
-            <a href="#" class="menu"><i class="fa-solid fa-bars"></i></a>
-        </div>
-        <div class="nav-menu">
-            <div class="submenu">
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                <p>Keranjang</p>
-            </div>
-            <div class="submenu">
-                <a href="login.php"><i class="fa-solid fa-user"></i></a>
-                <p>Masuk</p>
+    </section>
+    <section class="hero">
+        <!-- <img src="assets/indonesia (1).jpg" alt=""> -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/indonesia (1).jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/indonesia (2).jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/indonesia (3).jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
         </div>
     </section>
+    <section class="product">
+        <div class="title">
+            <h4>Yuk Belanja!</h4>
+        </div>
+        <div class="baris">
+            <a href="#">
+                <div class="kartu">
+                    <img src="assets/indonesia (1).jpg" alt="">
+                    <div class="caption">
+                        <div class="product-title">
+                            <p>Lorem ipsum dolor sit. Lorem, ipsum.</p>
+                        </div>
+                        <div class="price">
+                            <h4>Rp.45.000</h4>
+                        </div>
+                        <div class="address">
+                            <p>Kota Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
