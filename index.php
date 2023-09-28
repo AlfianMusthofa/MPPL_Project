@@ -1,3 +1,8 @@
+<?php
+require 'function.php';
+$product = mysqli_query($conn, "SELECT * FROM product");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,22 +46,24 @@
             <h4>Yuk Belanja!</h4>
         </div>
         <div class="baris">
-            <a href="#">
-                <div class="kartu">
-                    <img src="assets/indonesia (1).jpg" alt="">
-                    <div class="caption">
-                        <div class="product-title">
-                            <p>Lorem ipsum dolor sit. Lorem, ipsum.</p>
-                        </div>
-                        <div class="price">
-                            <h4>Rp.45.000</h4>
-                        </div>
-                        <div class="address">
-                            <p>Kota Jakarta</p>
+            <?php foreach ($product as $row) : ?>
+                <a href="#?id=<?= $row["id"] ?>">
+                    <div class="kartu">
+                        <img src="assets/<?= $row["productImage"] ?>" alt="">
+                        <div class="caption">
+                            <div class="product-title">
+                                <p><?= $row["productName"] ?></p>
+                            </div>
+                            <div class="price">
+                                <h4><?= $row["productPrice"] ?></h4>
+                            </div>
+                            <div class="address">
+                                <p><?= $row["productAddress"] ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            <?php endforeach ?>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
