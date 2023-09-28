@@ -113,10 +113,38 @@ body {
     font-weight: 500;
     margin-top: -5px;
     color: var(--font-color-grey);
+    display: flex;
+    gap: 5px;
 }
 
 .product .price h4 {
     margin-top: -6px;
     font-size: 15px;
     font-weight: 700;
+}
+
+.product .rating {
+    margin-top: -10px;
+    display: flex;
+    gap: 5px;
+    line-height: 0px;
+}
+
+.product .rating i {
+    font-size: 13px;
+    color: yellow;
+}
+
+.product .rating .sold {
+    margin-top: 9px;
+}
+
+.product .rating .sold p {
+    font-size: 12px;
+    color: var(--font-color-grey);
+}
+
+.product .address img {
+    width: 15px;
+    height: 15px;
 }

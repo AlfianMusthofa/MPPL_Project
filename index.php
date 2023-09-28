@@ -58,7 +58,16 @@ $product = mysqli_query($conn, "SELECT * FROM product");
                                 <h4><?= $row["productPrice"] ?></h4>
                             </div>
                             <div class="address">
+                                <img src="assets/badge_os.png" alt="">
                                 <p><?= $row["productAddress"] ?></p>
+                            </div>
+                            <div class="rating">
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="sold">
+                                    <p> <?= $row["productRating"] ?> | <?= $row["productSold"] ?> terjual</p>
+                                </div>
                             </div>
                         </div>
                     </div>
