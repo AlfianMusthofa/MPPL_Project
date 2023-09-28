@@ -1,5 +1,6 @@
 <?php
 require 'function.php';
+// session_start();
 
 if (isset($_POST["login"])) {
 
@@ -14,7 +15,8 @@ if (isset($_POST["login"])) {
 
         if (password_verify($password, $nama["password"])) {
 
-            header("Location: index.php");
+            // $_SESSION["login"] = true;
+            header("Location: index2.php");
             exit;
         }
     } else {
@@ -41,7 +43,7 @@ if (isset($_POST["login"])) {
 <body>
     <section class="container">
         <form action="" method="post">
-            <img src="assets/bg.jpg" alt="">
+            <img src="assets/indonesia (2).jpg" alt="">
             <div class="content">
                 <div class="title">
                     <h3>Hello Friend</h3>
