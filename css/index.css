@@ -43,13 +43,36 @@ body {
     text-decoration: none;
 }
 
+.header .searchField {
+    width: 500px;
+    position: relative;
+}
+
+.header input {
+    width: 100%;
+    font-size: 13px;
+    padding: 7px 0 7px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .searchField i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 13px;
+}
+
+
 .header .navlink a {
     margin: 0 8px;
     color: #fff;
 }
 
 .hero {
-    margin-top: 70px;
+    margin-top: 75px;
     padding: 0 7%;
 }
 

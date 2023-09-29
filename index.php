@@ -20,13 +20,16 @@ $product = mysqli_query($conn, "SELECT * FROM product");
         <div class="logo">
             <a href="#">OurShop</a>
         </div>
+        <div class="searchField">
+            <input type="search" placeholder="Bade milarian naon kang/teh ?">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
         <div class="navlink">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
         </div>
     </section>
     <section class="hero">
-        <!-- <img src="assets/indonesia (1).jpg" alt=""> -->
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

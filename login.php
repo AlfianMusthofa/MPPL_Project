@@ -16,7 +16,7 @@ if (isset($_POST["login"])) {
         if (password_verify($password, $nama["password"])) {
 
             // $_SESSION["login"] = true;
-            header("Location: index2.php");
+            header("Location: index.php");
             exit;
         }
     } else {
