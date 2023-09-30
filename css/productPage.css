@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,600&family=Satisfy&display=swap');
+
+:root {
+    --main-theme-color: #007bff;
+    --font-color: #303135;
+    --font-color-grey: #71747d;
+    --hover-main-color: #429dff;
+    --price-color: #f15c59;
+    --biru-muda: #cce6ff;
+    --border-radius-color: #bfbfbf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 15px 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header .logo a {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header .searchField {
+    width: 500px;
+    position: relative;
+}
+
+.header input {
+    width: 100%;
+    font-size: 13px;
+    padding: 7px 0 7px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .searchField i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 13px;
+}
+
+
+.header .navlink a {
+    margin: 0 8px;
+    color: #fff;
+}
+
+.container {
+    margin-top: 70px;
+    padding: 0 7%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container img {
+    width: 348px;
+    height: 348px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.container .row img {
+    width: 57px;
+    height: 57px;
+    object-fit: cover;
+}
+
+.col {
+    color: var(--font-color);
+}
+
+.col .productName h4 {
+    font-size: 20px;
+}
+
+.container .productSold {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container .sold {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.container .sold span {
+    color: var(--font-color-grey);
+}
+
+.container .rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.container .rating i {
+    font-size: 13px;
+    color: yellow;
+}
+
+.container .review p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.container .review span {
+    font-size: 12px;
+    color: var(--font-color-grey);
+}
+
+.container .price {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.col .detail {
+    margin-top: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.content {
+    font-size: 14px;
+    margin-top: 6px;
+    color: var(--font-color-grey);
+}
+
+.content span {
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+.shopContainer {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+}
+
+.shopContainer .row {
+    /* border: 1px solid red; */
+    width: 333px;
+}
+
+.shopContainer img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.shopContainer .shop-content {
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+.shopContainer .row:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopContainer .row .online {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--font-color-grey);
+}
+
+.shopContainer .row a {
+    font-size: 14px;
+    padding: 4px 16px;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
+.shopContainer .row:last-child {
+    margin-top: 10px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.shopContainer .row .rating {
+    display: flex;
+    align-items: center;
+}
+
+.shopContainer .row .rating p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.shopContainer .row .rating span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--font-color-grey);
+}
+
+.shopContainer .row .rating i {
+    font-size: 14px;
+}
+
+.shopContainer .row .process {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.shopContainer .row .process i {
+    font-size: 14px;
+}
+
+.shopContainer .row .process p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.shopContainer .row .process span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--font-color-grey);
+}

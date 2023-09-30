@@ -62,7 +62,7 @@ $product = mysqli_query($conn, "SELECT * FROM product");
                             </div>
                             <div class="address">
                                 <img src="assets/badge_os.png" alt="">
-                                <p><?= $row["productAddress"] ?></p>
+                                <p>Kota Jakarta</p>
                             </div>
                             <div class="rating">
                                 <div class="star">
