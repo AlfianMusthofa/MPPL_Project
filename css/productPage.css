@@ -76,21 +76,33 @@ body {
     padding: 0 7%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* position: relative; */
 }
 
-.container img {
+
+.container .image img {
     width: 348px;
     height: 348px;
     object-fit: cover;
     border-radius: 10px;
+    /* position: sticky;
+    top: 75px; */
 }
 
+.container .row-image {
+    display: flex;
+    gap: 5px;
+}
 
-
-.container .row img {
+.container .row-image img {
     width: 57px;
     height: 57px;
     object-fit: cover;
+    cursor: pointer;
+}
+
+.container .row-image img:hover {
+    opacity: 0.5;
 }
 
 .col {
@@ -234,7 +246,7 @@ body {
 
 .shopContainer .row .process {
     display: flex;
-    gap: 3px;
+    gap: 7px;
     align-items: center;
     margin-top: 5px;
 }
@@ -251,5 +263,131 @@ body {
 .shopContainer .row .process span {
     font-size: 13px;
     font-weight: 500;
+    color: var(--font-color-grey);
+}
+
+.pengiriman,
+.promo,
+.penawaran {
+    margin-top: 35px;
+}
+
+.pengiriman .title p,
+.promo .title p,
+.penawaran .title p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.pengiriman .location {
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    margin-top: 9px;
+}
+
+.pengiriman .location .logo {
+    font-size: 14px;
+}
+
+.pengiriman .location p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.pengiriman .location span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.package {
+    display: flex;
+    gap: 10px;
+}
+
+.package .col i {
+    font-size: 12px;
+}
+
+.package .col:last-child {
+    margin-top: 4px;
+}
+
+.package .col:nth-child(2) {
+    line-height: 23px;
+}
+
+.package .col .ongkir {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.package .col .time {
+    font-size: 14px;
+    color: var(--font-color-grey);
+    font-weight: 500;
+}
+
+.package .kurir-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.package .kurir .col {
+    display: flex;
+    gap: 5px;
+    text-align: center;
+}
+
+.package .kurir .instant,
+.cod {
+    font-size: 12px;
+    background-color: #429dff;
+    padding: 0px 7px;
+    font-weight: 500;
+}
+
+.package .kurir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo .box {
+    line-height: 22px;
+    /* border: 1px solid red; */
+    width: 200px;
+    padding: 5px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+}
+
+.promo .cashback {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.promo h4 {
+    font-size: 18px;
+}
+
+.promo .sk {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--font-color-grey);
+}
+
+.penawaran .row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.penawaran .sub-title {
+    font-weight: bold;
+}
+
+.penawaran .link {
+    font-size: 13px;
     color: var(--font-color-grey);
 }

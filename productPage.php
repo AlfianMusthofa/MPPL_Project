@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/productPage.css">
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
+    <script src="js/pPage.js" defer></script>
 </head>
 
 <body>
@@ -25,11 +26,11 @@
     </section>
     <section class="container">
         <div class="image">
-            <img src="assets/indonesia (1).jpg" alt="">
-            <div class="row">
-                <img src="assets/indonesia (1).jpg" alt="">
-                <img src="assets/indonesia (2).jpg" alt="">
-                <img src="assets/indonesia (3).jpg" alt="">
+            <img src="assets/indonesia (1).jpg" alt="" class="jumbo">
+            <div class="row-image">
+                <img src="assets/indonesia (1).jpg" alt="" class="thumb">
+                <img src="assets/indonesia (2).jpg" alt="" class="thumb">
+                <img src="assets/indonesia (3).jpg" alt="" class="thumb">
             </div>
         </div>
         <div class="col">
@@ -64,7 +65,7 @@
                 </div>
             </div>
             <div class="shopContainer">
-                <img src="assets/indonesia (1).jpg" alt="">
+                <img src="assets/indonesia (2).jpg" alt="">
                 <div class="shop-container">
                     <div class="row">
                         <div class="shop-content">
@@ -86,6 +87,57 @@
                                 <p>9 jam <span>pesanan diproses</span></p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pengiriman">
+                <div class="title">
+                    <p>Pengiriman</p>
+                </div>
+                <div class="location">
+                    <div class="logo">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <p>Dikirim dari <span>Kota Jakarta</span></p>
+                </div>
+                <div class="package">
+                    <div class="col">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="col">
+                        <p class="ongkir">Ongkir reguler 9rb - 13 rb</p>
+                        <p class="time">Estimasi tiba 1 - 6 Okt</p>
+                        <div class="kurir">
+                            <div class="col">
+                                <p class="kurir-title">Kurir lainnya:</p>
+                                <p class="instant">instant</p>
+                                <p class="cod">cod</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo">
+                <div class="title">
+                    <p>Promo</p>
+                </div>
+                <div class="box">
+                    <p class="cashback">Cashback</p>
+                    <h4>5%</h4>
+                    <p class="sk">min. Pembelian 50rb</p>
+                </div>
+            </div>
+            <div class="penawaran">
+                <div class="title">
+                    <p>Penawaran Lainnya</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div class="col">
+                        <p class="sub-title">Paylater & Cicilan</p>
+                        <p class="link">Beli sekarang, bayar akhir bulan atau 30 hari lagi</p>
                     </div>
                 </div>
             </div>
