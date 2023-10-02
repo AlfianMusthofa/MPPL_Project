@@ -215,7 +215,7 @@ body {
     font-size: 14px;
     padding: 4px 16px;
     border-radius: 5px;
-    border: 2px solid red;
+    border: 2px solid var(--main-theme-color);
 }
 
 .shopContainer .row:last-child {
@@ -394,7 +394,7 @@ body {
 }
 
 .side-panel {
-    border: 1px solid red;
+    border: 1px solid var(--main-theme-color);
     padding: 10px;
     border-radius: 10px;
     height: 360px;
@@ -431,7 +431,7 @@ body {
     justify-content: space-between;
     align-items: center;
     color: 100px;
-    border: 1px solid red;
+    border: 1px solid var(--main-theme-color);
     padding: 5px;
     width: 90px;
     border-radius: 7px;
@@ -503,4 +503,11 @@ body {
 
 .side-panel .btn-grup .row button {
     padding: 7px 26px;
+}
+
+.side-panel-container .adv img {
+    margin-top: 20px;
+    width: 100%;
+    height: 89px;
+    object-fit: cover;
 }

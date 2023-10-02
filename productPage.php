@@ -142,50 +142,55 @@
                 </div>
             </div>
         </div>
-        <div class="side-panel">
-            <div class="title">
-                <h4>Atur jumlah dan catatan</h4>
+        <div class="side-panel-container">
+            <div class="side-panel">
+                <div class="title">
+                    <h4>Atur jumlah dan catatan</h4>
+                </div>
+                <div class="image-container">
+                    <img src="assets/indonesia (1).jpg" alt="">
+                    <p>Laptop Gamink</p>
+                </div>
+                <div class="stok">
+                    <div class="col">
+                        <div class="icon">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="number-stok">
+                            <p>1</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p>Stok: loba pisan</p>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="row">
+                        <p>Subtotal</p>
+                        <h3>IDR 60.000</h3>
+                    </div>
+                </div>
+                <div class="cta">
+                    <button type="button" name="toCart"><i class="fa-solid fa-plus"></i> Keranjang</button>
+                    <button type="button" name="toCart">Beli Langsung</button>
+                </div>
+                <div class="btn-grup">
+                    <div class="row">
+                        <button type="button"><i class="fa-solid fa-message"></i> Chat</button>
+                    </div>
+                    <div class="row">
+                        <button type="button"><i class="fa-solid fa-heart"></i> Wishlist</button>
+                    </div>
+                    <div class="row">
+                        <button type="button"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                    </div>
+                </div>
             </div>
-            <div class="image-container">
+            <div class="adv">
                 <img src="assets/indonesia (1).jpg" alt="">
-                <p>Laptop Gamink</p>
-            </div>
-            <div class="stok">
-                <div class="col">
-                    <div class="icon">
-                        <i class="fa-solid fa-minus"></i>
-                    </div>
-                    <div class="number-stok">
-                        <p>1</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                </div>
-                <div class="col">
-                    <p>Stok: loba pisan</p>
-                </div>
-            </div>
-            <div class="total">
-                <div class="row">
-                    <p>Subtotal</p>
-                    <h3>IDR 60.000</h3>
-                </div>
-            </div>
-            <div class="cta">
-                <button type="button" name="toCart"><i class="fa-solid fa-plus"></i> Keranjang</button>
-                <button type="button" name="toCart">Beli Langsung</button>
-            </div>
-            <div class="btn-grup">
-                <div class="row">
-                    <button type="button"><i class="fa-regular fa-message"></i> Chat</button>
-                </div>
-                <div class="row">
-                    <button type="button"><i class="fa-regular fa-heart"></i> Wishlist</button>
-                </div>
-                <div class="row">
-                    <button type="button"><i class="fa-solid fa-share-nodes"></i> Share</button>
-                </div>
             </div>
         </div>
     </section>
