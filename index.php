@@ -50,7 +50,7 @@ $product = mysqli_query($conn, "SELECT * FROM product");
         </div>
         <div class="baris">
             <?php foreach ($product as $row) : ?>
-                <a href="#?id=<?= $row["id"] ?>">
+                <a href="productPage.php?id=<?= $row["id"] ?>">
                     <div class="kartu">
                         <img src="assets/<?= $row["productImage"] ?>" alt="">
                         <div class="caption">

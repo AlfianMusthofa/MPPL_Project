@@ -77,6 +77,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* position: relative; */
+    gap: 25px;
 }
 
 
@@ -390,4 +391,116 @@ body {
 .penawaran .link {
     font-size: 13px;
     color: var(--font-color-grey);
+}
+
+.side-panel {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    height: 360px;
+}
+
+.side-panel .image-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.side-panel .image-container img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.side-panel .image-container p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.side-panel .stok {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.side-panel .col:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: 100px;
+    border: 1px solid red;
+    padding: 5px;
+    width: 90px;
+    border-radius: 7px;
+}
+
+.side-panel .col:first-child .icon i {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.side-panel .col:last-child {
+    width: 140px;
+    font-size: 13px;
+}
+
+.side-panel .col:last-child p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.side-panel .total {
+    margin-top: 20px;
+}
+
+.side-panel .total .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-color);
+}
+
+.side-panel .total .row p {
+    color: var(--font-color-grey);
+    font-size: 15px;
+}
+
+.side-panel .cta {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.side-panel button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--main-theme-color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.side-panel button:last-child {
+    background-color: transparent;
+    border: 1px solid var(--main-theme-color);
+    color: var(--main-theme-color);
+    cursor: pointer;
+}
+
+.side-panel .btn-grup {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 4px;
+}
+
+.side-panel .btn-grup .row button {
+    padding: 7px 26px;
 }
