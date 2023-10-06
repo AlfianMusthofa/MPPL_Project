@@ -76,8 +76,23 @@ body {
     color: var(--font-color);
 }
 
+.row .col {
+    border: 1px solid red;
+}
+
+.row .sub-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row .sub-row .card {
+    border: 1px solid red;
+    padding: 5px;
+}
+
 .row .title {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .row .sub-row .shop-title {
@@ -150,4 +165,5 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
 }

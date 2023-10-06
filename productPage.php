@@ -1,3 +1,9 @@
+<?php
+require 'function.php';
+$id = $_GET["id"];
+$products = query("SELECT * FROM product WHERE id = $id")[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,17 +14,12 @@
     <link rel="stylesheet" href="css/productPage.css">
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
     <script src="js/pPage.js" defer></script>
-    <script src="js/global.js" defer></script>
 </head>
 
 <body>
     <section class="header">
         <div class="logo">
-            <a href="#">OurShop</a>
-        </div>
-        <div class="searchField">
-            <input type="search" placeholder="Bade milarian naon kang/teh ?">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="index.php">OurShop</a>
         </div>
         <div class="navlink">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -27,30 +28,29 @@
     </section>
     <section class="container">
         <div class="image">
-            <img src="assets/indonesia (1).jpg" alt="" class="jumbo">
+            <img src="assets/<?= $products["productImage"] ?>" alt="" class="jumbo">
             <div class="row-image">
                 <img src="assets/indonesia (1).jpg" alt="" class="thumb">
                 <img src="assets/indonesia (2).jpg" alt="" class="thumb">
-                <img src="assets/indonesia (3).jpg" alt="" class="thumb">
             </div>
         </div>
         <div class="col">
             <div class="productName">
-                <h4>Laptop Gamink RTX Rata kanan</h4>
+                <h4><?= $products["productName"] ?></h4>
             </div>
             <div class="productSold">
                 <div class="sold">
-                    <p>Terjual <span>30+</span></p>
+                    <p>Terjual <span><?= $products["productSold"] ?></span></p>
                 </div>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <div class="review">
-                        <p>4.8 <span>(20 rating)</span></p>
+                        <p><?= $products["productStar"] ?> <span><?= $products["productRating"] ?></span></p>
                     </div>
                 </div>
             </div>
             <div class="price">
-                <h3>IDR 60.000</h3>
+                <h3><?= $products["productPrice"] ?></h3>
             </div>
             <div class="detail">
                 <div class="title">
@@ -62,7 +62,7 @@
                     <p>Etalase: <span>Laptop</span></p>
                 </div>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis recusandae nulla ratione rerum eveniet libero obcaecati esse qui aut!</p>
+                    <p><?= $products["Description"] ?></p>
                 </div>
             </div>
             <div class="shopContainer">
@@ -149,15 +149,15 @@
                     <h4>Atur jumlah dan catatan</h4>
                 </div>
                 <div class="image-container">
-                    <img src="assets/indonesia (1).jpg" alt="">
-                    <p>Laptop Gamink</p>
+                    <img src="assets/<?= $products["productImage"] ?>" alt="">
+                    <p><?= $products["productName"] ?></p>
                 </div>
                 <div class="stok">
                     <div class="col">
                         <div class="icon">
                             <i class="fa-solid fa-minus"></i>
                         </div>
-                        <div class="number-stok">
+                        <div class="quantity">
                             <p>1</p>
                         </div>
                         <div class="icon">
@@ -171,7 +171,7 @@
                 <div class="total">
                     <div class="row">
                         <p>Subtotal</p>
-                        <h3>IDR 60.000</h3>
+                        <h3><?= $products["productPrice"] ?></h3>
                     </div>
                 </div>
                 <div class="cta">
