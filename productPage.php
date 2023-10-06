@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/productPage.css">
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
     <script src="js/pPage.js" defer></script>
+    <script src="js/global.js" defer></script>
 </head>
 
 <body>
