@@ -1,7 +1,7 @@
 <?php
 require 'function.php';
 $id = $_GET["id"];
-$products = query("SELECT * FROM product WHERE id = $id")[0];
+$products = query("SELECT productName, productPrice, productImage, productStar, productRating, productSold, product.Description, shop.shopName, shop.shopImage, shop.shopAddress, etalase.type FROM product JOIN shop ON product.shopID = shop.id JOIN etalase ON product.etalaseID = etalase.id WHERE product.id = $id")[0];
 ?>
 
 <!DOCTYPE html>
@@ -59,18 +59,18 @@ $products = query("SELECT * FROM product WHERE id = $id")[0];
                 <div class="content">
                     <p>Kondisi: <span>Baru</span></p>
                     <p>Min. Pemesanan: <span>1 Buah</span></p>
-                    <p>Etalase: <span>Laptop</span></p>
+                    <p>Etalase: <span><?= $products["type"] ?></span></p>
                 </div>
                 <div class="description">
                     <p><?= $products["Description"] ?></p>
                 </div>
             </div>
             <div class="shopContainer">
-                <img src="assets/indonesia (2).jpg" alt="">
+                <img src="assets/<?= $products["shopImage"] ?>" alt="">
                 <div class="shop-container">
                     <div class="row">
                         <div class="shop-content">
-                            <h4>Toko Makmur</h4>
+                            <h4><?= $products["shopName"] ?></h4>
                             <p class="online">Online kemarin</p>
                         </div>
                         <a href="#">Follow</a>
@@ -99,7 +99,7 @@ $products = query("SELECT * FROM product WHERE id = $id")[0];
                     <div class="logo">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <p>Dikirim dari <span>Kota Jakarta</span></p>
+                    <p>Dikirim dari <span><?= $products["shopAddress"] ?></span></p>
                 </div>
                 <div class="package">
                     <div class="col">
