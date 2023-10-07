@@ -106,6 +106,13 @@ body {
     opacity: 0.5;
 }
 
+.container form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* position: relative; */
+    gap: 25px;
+}
+
 .col {
     color: var(--font-color);
 }
@@ -398,6 +405,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     height: 360px;
+    width: 340px;
 }
 
 .side-panel .image-container {
@@ -473,6 +481,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 7px;
+}
+
+.side-panel .cta a {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--main-theme-color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .side-panel button {

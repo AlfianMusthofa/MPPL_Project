@@ -46,3 +46,19 @@ function tambah($data)
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function tambahKeranjang($product)
+{
+    global $conn;
+
+    $shopName = $product["shopName"];
+    $shopAddress = $product["shopAddress"];
+    $productImage = $product["gambar"];
+    $productName = $product["productName"];
+    $productPrice = $product["productPrice"];
+
+    $query = "INSERT INTO cart VALUE ('','$shopName', '$shopAddress', '$productImage', '$productName', '$productPrice')";
+
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
