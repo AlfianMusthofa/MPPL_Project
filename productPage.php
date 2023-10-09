@@ -14,13 +14,13 @@ if (isset($_POST["toCart"])) {
     if (tambahKeranjang($_POST) > 0) {
         echo "
                 <script>
-                    alert('Produk di keranjang');
+                    alert('Sukses ditambahkan!');
                 </script>
             ";
     }
 }
 
-$gambar = $products["productImage"];
+// $gambar = $products["productImage"];
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +97,6 @@ $gambar = $products["productImage"];
                                 <input type="hidden" name="shopName" value="<?= $products["shopName"] ?>">
                                 <p class="online">Online kemarin</p>
                             </div>
-                            <a href="#">Follow</a>
                         </div>
                         <div class="row">
                             <div class="rating">
@@ -151,20 +150,6 @@ $gambar = $products["productImage"];
                         <p class="cashback">Cashback</p>
                         <h4>5%</h4>
                         <p class="sk">min. Pembelian 50rb</p>
-                    </div>
-                </div>
-                <div class="penawaran">
-                    <div class="title">
-                        <p>Penawaran Lainnya</p>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <i class="fa-solid fa-wallet"></i>
-                        </div>
-                        <div class="col">
-                            <p class="sub-title">Paylater & Cicilan</p>
-                            <p class="link">Beli sekarang, bayar akhir bulan atau 30 hari lagi</p>
-                        </div>
                     </div>
                 </div>
             </div>

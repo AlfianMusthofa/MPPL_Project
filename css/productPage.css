@@ -121,6 +121,10 @@ body {
     font-size: 20px;
 }
 
+.container .col {
+    width: 440px;
+}
+
 .container .productSold {
     display: flex;
     gap: 10px;
@@ -168,8 +172,10 @@ body {
 
 .description {
     margin-top: 10px;
-    font-weight: 500;
-    text-align: justify;
+    /* font-weight: 500; */
+    /* text-align: justify; */
+    font-size: 14px;
+    color: black;
 }
 
 .content {
@@ -405,7 +411,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     height: 360px;
-    width: 340px;
+    width: 300px;
 }
 
 .side-panel .image-container {
@@ -519,12 +525,12 @@ body {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: space-between;
     gap: 4px;
 }
 
 .side-panel .btn-grup .row button {
-    padding: 7px 26px;
+    padding: 7px 19px;
 }
 
 .side-panel-container .adv img {

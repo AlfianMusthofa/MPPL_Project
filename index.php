@@ -1,6 +1,7 @@
 <?php
 require 'function.php';
-$product = mysqli_query($conn, "SELECT * FROM product");
+// $product = mysqli_query($conn, "SELECT * FROM product");
+$product = mysqli_query($conn, "SELECT product.id, productImage, productName, productPrice, productStar, productSold, shop.shopAddress FROM product JOIN shop ON product.shopID = shop.id");
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ $product = mysqli_query($conn, "SELECT * FROM product");
             <a href="#products">Products</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
         </div>
     </section>
@@ -76,7 +77,7 @@ $product = mysqli_query($conn, "SELECT * FROM product");
                             </div>
                             <div class="address">
                                 <img src="assets/badge_os.png" alt="">
-                                <p>Kota Jakarta</p>
+                                <p><?= $row["shopAddress"] ?></p>
                             </div>
                             <div class="rating">
                                 <div class="star">
