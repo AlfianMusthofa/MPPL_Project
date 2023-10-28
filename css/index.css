@@ -154,14 +154,28 @@ body {
 }
 
 .product .title h4 {
-    font-size: 20px;
+    font-size: 25px;
+    /* margin: 20px 0; */
+}
+
+.product .buttons {
     margin: 20px 0;
 }
 
+.product button {
+    outline: none;
+    border: none;
+    border: 1px solid var(--border-radius-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-right: 3px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
 .product .kartu {
-    width: 188px;
-    /* border: 1px solid red; */
-    /* height: 290px; */
+    width: 190px;
+    border: 1px solid red;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
     border-radius: 7px;
 }
@@ -170,6 +184,7 @@ body {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .product .baris a {

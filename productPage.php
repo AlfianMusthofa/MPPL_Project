@@ -20,7 +20,6 @@ if (isset($_POST["toCart"])) {
     }
 }
 
-// $gambar = $products["productImage"];
 ?>
 
 <!DOCTYPE html>

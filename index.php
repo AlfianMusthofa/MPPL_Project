@@ -14,6 +14,7 @@ $product = mysqli_query($conn, "SELECT product.id, productImage, productName, pr
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -63,8 +64,13 @@ $product = mysqli_query($conn, "SELECT product.id, productImage, productName, pr
         <div class="title">
             <h4>Yuk Belanja!</h4>
         </div>
+        <div class="buttons">
+            <button type="button" class="button">Smartphone</button>
+            <button type="button" class="button">Laptop</button>
+            <button type="button" class="button">Gaming</button>
+        </div>
         <div class="baris">
-            <?php foreach ($product as $row) : ?>
+            <!-- <?php foreach ($product as $row) : ?>
                 <a href="productPage.php?id=<?= $row["id"] ?>">
                     <div class="kartu">
                         <img src="assets/<?= $row["productImage"] ?>" alt="">
@@ -90,10 +96,12 @@ $product = mysqli_query($conn, "SELECT product.id, productImage, productName, pr
                         </div>
                     </div>
                 </a>
-            <?php endforeach ?>
+            <?php endforeach ?> -->
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
