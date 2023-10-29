@@ -41,7 +41,7 @@ $cart = mysqli_query($conn, "SELECT * FROM cart");
                             <p class="shop-location"><?= $product["shopAddress"] ?></p>
                         </div>
                         <div class="product-information">
-                            <img src="assets/<?= $product["productImage"] ?>" alt="" style="width: 60px; height: 60px; object-fit:cover; border-radius:5px;">
+                            <img src="assets/MPPL/<?= $product["productImage"] ?>" alt="" style="width: 60px; height: 60px; object-fit:cover; border-radius:5px;">
                             <div class="product-information-row">
                                 <p class="product-title"><?= $product["productName"] ?></p>
                                 <p class="price">IDR <?= $product["productPrice"] ?></p>

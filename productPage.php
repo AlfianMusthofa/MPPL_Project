@@ -47,7 +47,7 @@ if (isset($_POST["toCart"])) {
     <section class="container">
         <form action="" method="post">
             <div class="image">
-                <img src="assets/<?= $products["productImage"] ?>" alt="" class="jumbo">
+                <img src="assets/MPPL/<?= $products["productImage"] ?>" alt="" class="jumbo">
                 <input type="hidden" name="gambar" value="<?= $products["productImage"] ?>">
                 <div class="row-image">
                     <img src="assets/indonesia (1).jpg" alt="" class="thumb">
@@ -158,7 +158,7 @@ if (isset($_POST["toCart"])) {
                         <h4>Atur jumlah dan catatan</h4>
                     </div>
                     <div class="image-container">
-                        <img src="assets/<?= $products["productImage"] ?>" alt="">
+                        <img src="assets/MPPL/<?= $products["productImage"] ?>" alt="">
                         <p><?= $products["productName"] ?></p>
                     </div>
                     <div class="stok">
