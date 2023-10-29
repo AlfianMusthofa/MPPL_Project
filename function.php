@@ -62,3 +62,9 @@ function tambahKeranjang($product)
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function cari($keyword)
+{
+    $query = "SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id WHERE productName LIKE '%$keyword%'";
+    return query($query);
+}

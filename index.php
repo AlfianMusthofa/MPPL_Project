@@ -1,7 +1,10 @@
 <?php
 require 'function.php';
-// $product = mysqli_query($conn, "SELECT * FROM product");
-$product = mysqli_query($conn, "SELECT product.id, productImage, productName, productPrice, productStar, productSold, shop.shopAddress FROM product JOIN shop ON product.shopID = shop.id");
+$product = mysqli_query($conn, "SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id");
+
+if (isset($_POST['submit'])) {
+    $product = cari($_POST['keyword']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +28,14 @@ $product = mysqli_query($conn, "SELECT product.id, productImage, productName, pr
         <div class="navlink">
             <a href="#">Home</a>
             <a href="#products">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="#" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
         </div>
+        <form action="" method="post" class="form">
+            <input type="search" name="keyword" id="searchbox" placeholder="Mau cari apa?" autocomplete="off">
+            <button type="submit" name="submit">Cari</button>
+        </form>
     </section>
     <section class="home">
         <img src="assets/hero4.png" alt="">
@@ -62,15 +68,15 @@ $product = mysqli_query($conn, "SELECT product.id, productImage, productName, pr
     </section>
     <section class="product" id="products">
         <div class="title">
-            <h4>Yuk Belanja!</h4>
+            <h4>Kategori Pilihan</h4>
         </div>
         <div class="buttons">
-            <button type="button" class="button">Smartphone</button>
-            <button type="button" class="button">Laptop</button>
-            <button type="button" class="button">Gaming</button>
+            <a href="smartphonePage.php">Smartphone</a>
+            <a href="#">Laptop</a>
+            <a href="#">Gaming</a>
         </div>
         <div class="baris">
-            <!-- <?php foreach ($product as $row) : ?>
+            <?php foreach ($product as $row) : ?>
                 <a href="productPage.php?id=<?= $row["id"] ?>">
                     <div class="kartu">
                         <img src="assets/<?= $row["productImage"] ?>" alt="">
@@ -96,7 +102,7 @@ $product = mysqli_query($conn, "SELECT product.id, productImage, productName, pr
                         </div>
                     </div>
                 </a>
-            <?php endforeach ?> -->
+            <?php endforeach ?>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
