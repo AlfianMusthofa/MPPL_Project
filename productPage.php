@@ -71,7 +71,7 @@ if (isset($_POST["toCart"])) {
                     </div>
                 </div>
                 <div class="price">
-                    <h3><?= $products["productPrice"] ?></h3>
+                    <h3>IDR <?= $products["productPrice"] ?></h3>
                     <input type="hidden" name="productPrice" value="<?= $products["productPrice"] ?>">
                 </div>
                 <div class="detail">
@@ -180,7 +180,7 @@ if (isset($_POST["toCart"])) {
                     <div class="total">
                         <div class="row">
                             <p>Subtotal</p>
-                            <h3><?= $products["productPrice"] ?></h3>
+                            <h3>IDR <?= $products["productPrice"] ?></h3>
                         </div>
                     </div>
                     <div class="cta">

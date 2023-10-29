@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 <body>
     <section class="header">
         <div class="logo">
-            <a href="#">Omni <span>Marketplace</span></a>
+            <a href="#">Toko<span>Shop</span></a>
         </div>
         <div class="navlink">
             <a href="#">Home</a>
@@ -74,18 +74,21 @@ if (isset($_POST['submit'])) {
             <a href="smartphonePage.php">Smartphone</a>
             <a href="#">Laptop</a>
             <a href="#">Gaming</a>
+            <a href="#">Elektronik Dapur</a>
+            <a href="#">Elektronik Kantor</a>
+            <a href="#">TV & Aksesoris</a>
         </div>
         <div class="baris">
             <?php foreach ($product as $row) : ?>
                 <a href="productPage.php?id=<?= $row["id"] ?>">
                     <div class="kartu">
-                        <img src="assets/<?= $row["productImage"] ?>" alt="">
+                        <img src="assets/MPPL/<?= $row["productImage"] ?>" alt="">
                         <div class="caption">
                             <div class="product-title">
                                 <p><?= $row["productName"] ?></p>
                             </div>
                             <div class="price">
-                                <h4><?= $row["productPrice"] ?></h4>
+                                <h4>IDR <?= $row["productPrice"] ?></h4>
                             </div>
                             <div class="address">
                                 <img src="assets/badge_os.png" alt="">

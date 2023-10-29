@@ -44,7 +44,7 @@ $cart = mysqli_query($conn, "SELECT * FROM cart");
                             <img src="assets/<?= $product["productImage"] ?>" alt="" style="width: 60px; height: 60px; object-fit:cover; border-radius:5px;">
                             <div class="product-information-row">
                                 <p class="product-title"><?= $product["productName"] ?></p>
-                                <p class="price"><?= $product["productPrice"] ?></p>
+                                <p class="price">IDR <?= $product["productPrice"] ?></p>
                             </div>
                         </div>
                         <div class="setting">
