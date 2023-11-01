@@ -1,20 +1,18 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "php_db");
+require 'function.php';
 
-function fetchData($conn)
+function fetch($conn)
 {
-    $products = mysqli_query($conn, "SELECT product.id, productImage, productName, productPrice, productStar, productSold, shop.shopAddress AS shopAddress, etalase.type AS category FROM product JOIN shop ON product.shopID = shop.id JOIN etalase ON product.etalaseID = etalase.id");
+    $result = mysqli_query($conn, "SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id");
 
-    $data = array(
-        'products' => []
-    );
+    $data = [];
 
-    while ($row = mysqli_fetch_assoc($products)) {
-        $data['products'][] = $row;
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
     }
 
     return json_encode($data);
 }
 
-echo fetchData($conn);
+echo fetch($conn);

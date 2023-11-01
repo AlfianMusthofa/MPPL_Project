@@ -113,6 +113,11 @@ body {
     gap: 25px;
 }
 
+.container .image img {
+    position: sticky;
+    top: 0;
+}
+
 .col {
     color: var(--font-color);
 }

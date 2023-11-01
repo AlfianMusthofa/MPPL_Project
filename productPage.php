@@ -49,10 +49,10 @@ if (isset($_POST["toCart"])) {
             <div class="image">
                 <img src="assets/MPPL/<?= $products["productImage"] ?>" alt="" class="jumbo">
                 <input type="hidden" name="gambar" value="<?= $products["productImage"] ?>">
-                <div class="row-image">
+                <!-- <div class="row-image">
                     <img src="assets/indonesia (1).jpg" alt="" class="thumb">
                     <img src="assets/indonesia (2).jpg" alt="" class="thumb">
-                </div>
+                </div> -->
             </div>
             <div class="col">
                 <div class="productName">

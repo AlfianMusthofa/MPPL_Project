@@ -1,9 +1,10 @@
 <?php
 require 'function.php';
-$product = mysqli_query($conn, "SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id");
+
+$product = query("SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id");
 
 if (isset($_POST['submit'])) {
-    $product = cari($_POST['keyword']);
+    $searchResult = cari($_POST['keyword']);
 }
 ?>
 
