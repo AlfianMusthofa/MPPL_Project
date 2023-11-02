@@ -1,10 +1,10 @@
 <?php
-require 'function.php';
+require 'pagination.php';
 
-$product = query("SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id");
+$product = query("SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id LIMIT $awalData, $jumlahDataPerHalaman");
 
 if (isset($_POST['submit'])) {
-    $searchResult = cari($_POST['keyword']);
+    $product = cari($_POST['keyword']);
 }
 ?>
 
