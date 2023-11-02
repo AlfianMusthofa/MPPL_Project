@@ -27,8 +27,6 @@ if (isset($_POST['submit'])) {
             <a href="#">Toko<span>Shop</span></a>
         </div>
         <div class="navlink">
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
             <a href="#" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
@@ -135,6 +133,49 @@ if (isset($_POST['submit'])) {
 
             </ul>
         </nav>
+    </section>
+    <section class="footer">
+        <div class="box">
+            <h4>Customer Care</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Return & Exchanges</a>
+            <a href="#">Shipping</a>
+            <a href="#">Cancelling Order</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="box">
+            <h4>Inside AltairStore</h4>
+            <a href="#">About Us</a>
+            <a href="#">Carrier</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="box">
+            <h4>My Account</h4>
+            <a href="#">Sign in/Register</a>
+            <a href="#">My Whishlist</a>
+            <a href="#">My Card</a>
+        </div>
+        <div class="box">
+            <h4>Top Searches</h4>
+            <a href="#">Shoes</a>
+            <a href="#">Bag</a>
+            <a href="#">Fashion</a>
+        </div>
+        <div class="box">
+            <h4>Sign up & get 10% off</h4>
+            <div class="input-field">
+                <input type="text" name="" id="" placeholder="Email address">
+                <button>Subscribe</button>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-youtube"></i>
+            </div>
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

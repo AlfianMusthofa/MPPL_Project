@@ -287,3 +287,51 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.footer {
+    border-top: 1px solid var(--border-radius-color);
+    margin-top: 25px;
+    padding: 30px 4%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #18122B;
+    color: white;
+}
+
+.footer .box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer .box h4 {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--font-color);
+    color: #aeaeae;
+}
+
+.footer .box a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 14px;
+    color: #aeaeae;
+}
+
+.footer .box input {
+    padding: 5px;
+}
+
+.footer .box button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background-color: var(--font-color);
+    color: #aeaeae;
+}
+
+.footer .box .social i {
+    font-size: 27px;
+    margin-top: 10px;
+}
