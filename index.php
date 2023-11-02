@@ -109,6 +109,33 @@ if (isset($_POST['submit'])) {
             <?php endforeach ?>
         </div>
     </section>
+    <section class="pagination">
+        <nav aria-label="...">
+            <ul class="pagination">
+
+                <li class="page-item">
+                    <?php if ($halamanAktif > 1) : ?>
+                        <a class="page-link" href="?halaman=<?= $halamanAktif - 1 ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                    <?php else : ?>
+                        <a class="page-link" href="?halaman=<?= $halamanAktif ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                    <?php endif; ?>
+                </li>
+
+                <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                    <li class="page-item<?= ($i == 1) ? ' active' : '' ?>"><a class="page-link" href="?halaman=<?= $i; ?>"><?= $i ?></a></li>
+                <?php endfor; ?>
+
+                <li class="page-item">
+                    <?php if ($halamanAktif < $jumlahHalaman) : ?>
+                        <a class="page-link" href="?halaman=<?= $halamanAktif + 1 ?>">Next</a>
+                    <?php else : ?>
+                        <a class="page-link" href="?halaman=<?= $jumlahHalaman ?>">Next</a>
+                    <?php endif; ?>
+                </li>
+
+            </ul>
+        </nav>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
