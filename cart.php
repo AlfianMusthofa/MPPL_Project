@@ -2,6 +2,10 @@
 require 'function.php';
 $cart = mysqli_query($conn, "SELECT * FROM cart");
 $jumlahData = count(query("SELECT * FROM cart"));
+$totalHarga = 0;
+foreach ($cart as $item) {
+    $totalHarga += $item['productPrice'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +46,8 @@ $jumlahData = count(query("SELECT * FROM cart"));
                             <img src="assets/MPPL/<?= $product["productImage"] ?>" alt="" style="width: 60px; height: 60px; object-fit:cover; border-radius:5px;">
                             <div class="product-information-row">
                                 <p class="product-title"><?= $product["productName"] ?></p>
-                                <p class="price">IDR <?= $product["productPrice"] ?></p>
+                                <p class="price">IDR <?= number_format($product["productPrice"], 0, ',', '.'); ?></p>
+
                             </div>
                         </div>
                         <div class="setting">
@@ -79,13 +84,13 @@ $jumlahData = count(query("SELECT * FROM cart"));
                 <div class="sumbuy">
                     <p class="sumbuy-title">Ringkasan Belanja</p>
                     <div class="sub-sumbuy">
-                        <p>Total Harga(1 barang)</p>
-                        <p>IDR 23000000</p>
+                        <p>Total Harga (<?= $jumlahData ?> barang)</p>
+                        <p>IDR <?= number_format($totalHarga, 0, ',', '.') ?></p>
                     </div>
                 </div>
                 <div class="total">
                     <p>Total Harga</p>
-                    <p class="price">IDR 23000000</p>
+                    <p class="price">IDR <?= number_format($totalHarga, 0, ',', '.') ?></p>
                 </div>
                 <button type="submit">Beli</button>
             </div>

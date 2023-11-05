@@ -87,7 +87,8 @@ if (isset($_POST['submit'])) {
                                 <p><?= $row["productName"] ?></p>
                             </div>
                             <div class="price">
-                                <h4>IDR <?= $row["productPrice"] ?></h4>
+                                <!-- <h4>IDR <?= $row["productPrice"] ?></h4> -->
+                                <h4>IDR <?= number_format($row["productPrice"], 0, ',', '.'); ?></h4>
                             </div>
                             <div class="address">
                                 <img src="assets/badge_os.png" alt="">

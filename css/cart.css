@@ -24,7 +24,7 @@
     align-items: center;
     background-color: blueviolet;
     padding: 15px 7%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -71,7 +71,7 @@ body {
 }
 
 .row {
-    margin-top: 90px;
+    margin-top: 10px;
     padding: 0 7%;
     color: var(--font-color);
     display: flex;
