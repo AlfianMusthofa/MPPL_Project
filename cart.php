@@ -1,6 +1,7 @@
 <?php
 require 'function.php';
 $cart = mysqli_query($conn, "SELECT * FROM cart");
+$jumlahData = count(query("SELECT * FROM cart"));
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +28,6 @@ $cart = mysqli_query($conn, "SELECT * FROM cart");
     </section>
     <section class="row">
         <div class="col">
-            <div class="title">
-                <h3>Keranjang</h3>
-            </div>
             <div class="sub-row">
                 <?php foreach ($cart as $product) : ?>
                     <div class="card">
@@ -71,6 +69,25 @@ $cart = mysqli_query($conn, "SELECT * FROM cart");
                         </div>
                     </div>
                 <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <div class="promo">
+                    <p>Makin hemat dengan promo</p>
+                </div>
+                <div class="sumbuy">
+                    <p class="sumbuy-title">Ringkasan Belanja</p>
+                    <div class="sub-sumbuy">
+                        <p>Total Harga(1 barang)</p>
+                        <p>IDR 23000000</p>
+                    </div>
+                </div>
+                <div class="total">
+                    <p>Total Harga</p>
+                    <p class="price">IDR 23000000</p>
+                </div>
+                <button type="submit">Beli</button>
             </div>
         </div>
     </section>
