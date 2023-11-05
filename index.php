@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
         </form>
     </section>
     <section class="home">
-        <img src="assets/hero4.png" alt="">
+        <img src="assets/indonesia (1).jpg" alt="">
         <div class="home-text">
             <div class="content">
                 <h4>Trade - in - offer</h4>
