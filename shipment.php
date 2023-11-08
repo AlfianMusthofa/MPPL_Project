@@ -3,6 +3,9 @@ require 'function.php';
 $cart = mysqli_query($conn, "SELECT * FROM cart");
 $jumlahData = count(query("SELECT * FROM cart"));
 $totalHarga = 0;
+$ongkosKirim = 30000;
+$asuransi = 5000;
+$biayaJasa = 2500;
 foreach ($cart as $item) {
     $totalHarga += $item['productPrice'];
 }
@@ -68,24 +71,24 @@ foreach ($cart as $item) {
                 <div class="sub-box">
                     <div class="total-harga">
                         <p>Total Harga(Rp)</p>
-                        <p>Rp.222.000</p>
+                        <p>IDR <?= number_format($totalHarga, 0, ',', '.') ?></p>
                     </div>
                     <div class="total-harga">
                         <p>Total Ongkos Kirim</p>
-                        <p>Rp.222.000</p>
+                        <p>IDR <?= number_format($ongkosKirim, 0, ',', '.') ?></p>
                     </div>
                     <div class="total-harga">
                         <p>Asuransi Pengiriman</p>
-                        <p>Rp.222.000</p>
+                        <p>IDR <?= number_format($asuransi, 0, ',', '.') ?></p>
                     </div>
                     <div class="total-harga">
                         <p>Biaya Jasa Aplikasi</p>
-                        <p>Rp.222.000</p>
+                        <p>IDR <?= number_format($biayaJasa, 0, ',', '.') ?></p>
                     </div>
                 </div>
                 <div class="total-price">
                     <h3>Total Belanja</h3>
-                    <h3>Rp 200.000</h3>
+                    <h3>IDR <?= number_format($totalHarga + $asuransi + $biayaJasa + $ongkosKirim, 0, ',', '.') ?></h3>
                 </div>
                 <div class="cta">
                     <button type="submit">Pilih Pembayaran</button>

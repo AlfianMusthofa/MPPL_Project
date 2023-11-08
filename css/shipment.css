@@ -143,10 +143,12 @@ body {
 }
 
 .col .box {
-    width: 130%;
+    width: 320px;
     padding: 10px;
     border-radius: 7px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 10px;
 }
 
 .col:first-child {
@@ -188,4 +190,5 @@ body {
     border: none;
     color: #fff;
     border-radius: 5px;
+    cursor: pointer;
 }
