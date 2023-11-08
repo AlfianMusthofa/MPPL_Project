@@ -92,7 +92,9 @@ foreach ($cart as $item) {
                     <p>Total Harga</p>
                     <p class="price">IDR <?= number_format($totalHarga, 0, ',', '.') ?></p>
                 </div>
-                <button type="submit">Beli</button>
+                <form action="shipment.php">
+                    <button type="submit">Beli</button>
+                </form>
             </div>
         </div>
     </section>

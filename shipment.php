@@ -24,10 +24,10 @@ foreach ($cart as $item) {
             <a href="index.php">OurShop</a>
         </div>
     </section>
+    <div class="title">
+        <h3>Chekout</h3>
+    </div>
     <section class="row">
-        <div class="title">
-            <h3>Chekout</h3>
-        </div>
         <div class="col">
             <p class="alamat">Alamat Pengiriman</p>
             <div class="address">
@@ -60,6 +60,36 @@ foreach ($cart as $item) {
                         </div>
                     </div>
                 <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <h4>Ringkasan Belanja</h4>
+                <div class="sub-box">
+                    <div class="total-harga">
+                        <p>Total Harga(Rp)</p>
+                        <p>Rp.222.000</p>
+                    </div>
+                    <div class="total-harga">
+                        <p>Total Ongkos Kirim</p>
+                        <p>Rp.222.000</p>
+                    </div>
+                    <div class="total-harga">
+                        <p>Asuransi Pengiriman</p>
+                        <p>Rp.222.000</p>
+                    </div>
+                    <div class="total-harga">
+                        <p>Biaya Jasa Aplikasi</p>
+                        <p>Rp.222.000</p>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <h3>Total Belanja</h3>
+                    <h3>Rp 200.000</h3>
+                </div>
+                <div class="cta">
+                    <button type="submit">Pilih Pembayaran</button>
+                </div>
             </div>
         </div>
     </section>
