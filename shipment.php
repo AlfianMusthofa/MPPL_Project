@@ -91,7 +91,7 @@ foreach ($cart as $item) {
                     <h3>IDR <?= number_format($totalHarga + $asuransi + $biayaJasa + $ongkosKirim, 0, ',', '.') ?></h3>
                 </div>
                 <div class="cta">
-                    <button type="submit">Pilih Pembayaran</button>
+                    <button type="submit">Pembayaran</button>
                 </div>
             </div>
         </div>
