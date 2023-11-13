@@ -37,22 +37,23 @@ if (isset($_POST["toCart"])) {
 <body>
     <section class="header">
         <div class="logo">
-            <a href="index.php">OurShop</a>
+            <a href="index.php"><img src="assets/logo.webp" alt=""></a>
         </div>
         <div class="navlink">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
         </div>
+        <form action="" method="post" class="form">
+            <input type="search" name="keyword" id="searchbox" placeholder="Mau cari apa?" autocomplete="off">
+            <button type="submit" name="submit">Cari</button>
+        </form>
     </section>
     <section class="container">
         <form action="" method="post">
             <div class="image">
                 <img src="assets/MPPL/<?= $products["productImage"] ?>" alt="" class="jumbo">
                 <input type="hidden" name="gambar" value="<?= $products["productImage"] ?>">
-                <!-- <div class="row-image">
-                    <img src="assets/indonesia (1).jpg" alt="" class="thumb">
-                    <img src="assets/indonesia (2).jpg" alt="" class="thumb">
-                </div> -->
             </div>
             <div class="col">
                 <div class="productName">
@@ -200,9 +201,9 @@ if (isset($_POST["toCart"])) {
                         </div>
                     </div>
                 </div>
-                <div class="adv">
+                <!-- <div class="adv">
                     <img src="assets/indonesia (1).jpg" alt="">
-                </div>
+                </div> -->
             </div>
         </form>
     </section>

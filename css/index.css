@@ -39,12 +39,8 @@ body {
     /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
 }
 
-.header .logo a {
-    font-size: 18px;
-    color: var(--font-color);
-    font-weight: 700;
-    text-decoration: none;
-    font-style: italic;
+.header .logo img {
+    width: 100px;
 }
 
 .header .logo a span {

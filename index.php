@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION = true;
 require 'pagination.php';
 
 $product = query("SELECT product.id, productImage, productName, productPrice, shop.shopAddress, productStar, productSold FROM product JOIN shop ON product.shopID = shop.id LIMIT $awalData, $jumlahDataPerHalaman");
@@ -24,7 +26,7 @@ if (isset($_POST['submit'])) {
 <body>
     <section class="header">
         <div class="logo">
-            <a href="#">Toko<span>Shop</span></a>
+            <a href="#"><img src="assets/logo.webp" alt=""></a>
         </div>
         <div class="navlink">
             <a href="#" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>

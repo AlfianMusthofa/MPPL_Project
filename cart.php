@@ -57,7 +57,7 @@ foreach ($cart as $item) {
                             <div class="sub-col">
                                 <div class="sub-row2">
                                     <p class="whishlist">Sudah di Wishlist |</p>
-                                    <a href="#?id=<?= $product["id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
+                                    <a href="hapus.php?id=<?= $product["id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 </div>
                                 <div class="sub-row2">
                                     <div class="icon">
