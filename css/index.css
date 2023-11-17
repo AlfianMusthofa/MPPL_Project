@@ -78,6 +78,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.header .bars {
+    display: none;
+}
+
 .header .navlink a:hover {
     color: var(--hover-main-color);
 }
@@ -122,6 +126,7 @@ body {
     margin-top: 20px;
     width: 100%;
     height: 100vh;
+    object-fit: cover;
 }
 
 .home .home-text {
@@ -330,4 +335,64 @@ body {
 .footer .box .social i {
     font-size: 27px;
     margin-top: 10px;
+}
+
+/* MEDIA SCREEN */
+
+@media (max-width: 576px) {
+    .header .navlink {
+        display: none;
+    }
+
+    .header .bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    .home .content h4 {
+        font-size: 15px;
+    }
+
+    .home .content h3 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .home .content p {
+        font-size: 15px;
+        color: var(--font-color-grey);
+    }
+
+    .product .buttons {
+        display: none;
+    }
+
+    .product .baris {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .product .baris {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .product .baris {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+    }
 }

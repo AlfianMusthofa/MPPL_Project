@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AltairStore | Menyediakan Berbagai Kebutuhan</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/707c864a21.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -32,6 +32,9 @@ if (isset($_POST['submit'])) {
             <a href="#" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="bars">
+            <i class="fa-solid fa-bars"></i>
         </div>
         <form action="" method="post" class="form">
             <input type="search" name="keyword" id="searchbox" placeholder="Mau cari apa?" autocomplete="off">
@@ -122,7 +125,7 @@ if (isset($_POST['submit'])) {
                 </li>
 
                 <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
-                    <li class="page-item<?= ($i == 1) ? ' active' : '' ?>"><a class="page-link" href="?halaman=<?= $i; ?>"><?= $i ?></a></li>
+                    <li class="page-item<?= ($i == 1) ? ' ' : '' ?>"><a class="page-link" href="?halaman=<?= $i; ?>"><?= $i ?></a></li>
                 <?php endfor; ?>
 
                 <li class="page-item">
